@@ -163,7 +163,7 @@ def imwrite(name, arr, format=None):
     >>> imwrite('rgb_gradient.png', rgb)
 
     """
-    im = toimage(arr)
+    im = toimage(arr, channel_axis=2)
     if format is None:
         im.save(name)
     else:
